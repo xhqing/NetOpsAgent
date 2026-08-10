@@ -6,6 +6,10 @@
 
 ## [未发布]
 
+### 新增
+
+- 子项目 XPilot 纳入负责范围（2026-08-10）：用户将独立仓库 [xhqing/XPilot](https://github.com/xhqing/XPilot) 交由本项目（Hermes）负责维护，按全局规则「Agent 项目与子项目的 `.claude/` 超集关系」执行：`CLAUDE.md` 新增「子项目清单」节；XPilot 新建 `.claude/CLAUDE.md`（XPilot 项目说明 + 负责工程师 Hermes 节 + 本文件全文随附，带指代说明）；XPilot `.gitignore` 补 `.claude/settings.local.json` 忽略规则（防止本机配置入库）。**为什么**：用户明确将 XPilot 划归 Hermes，需建立超集关系，使用户只操作子项目时也能看到 Agent 完整规则。
+
 ### 变更
 
 - 仓库重建（2026-08-09）：XPilot 工具从仓库内子项目拆出为**独立仓库** [xhqing/XPilot](https://github.com/xhqing/XPilot)（工具侧改回独立工具项目、版本 0.5.1，功能不变）；本仓库恢复为纯 Agent 项目，README（中英双语）、`.claude/CLAUDE.md`、`.codebuddy/CODEBUDDY.md` 同步改为指向独立 XPilot 仓库。**为什么**：8-08 的 Agent 化把工具塞进 `XPilot/` 子目录、仓库与目录改名 `NetOpsAgent`，实际使用中发现工具独立成库更合适——Agent 定位（Hermes）保留在本仓库，工具独立演进、互不干扰。

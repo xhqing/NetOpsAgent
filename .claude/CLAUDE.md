@@ -14,6 +14,12 @@
 - `.codebuddy/CODEBUDDY.md`：CodeBuddy 项目说明（一行引用 `../.claude/CLAUDE.md`，单一来源）。
 - 工具本体在独立仓库 [xhqing/XPilot](https://github.com/xhqing/XPilot)（含其独立 README、配置、测试、Docker 与开发工具链）。
 
+## 子项目清单
+
+本项目（Hermes）负责维护以下子项目，`.claude/` 与子项目 `.claude/` 之间维护「Agent 项目为权威源、子项目为超集」的关系（全局规则「Agent 项目与子项目的 `.claude/` 超集关系」，2026-08-10 立）：本文件全文随附进子项目 `.claude/CLAUDE.md`，其中「本项目」均指 NetOpsAgent。
+
+- **NetOpsAgent（Hermes）→ XPilot**：独立仓库 [xhqing/XPilot](https://github.com/xhqing/XPilot)，Hermes 开发的 Xray-core 节点管理 CLI 工具。
+
 ## commit skill 检测缓存
 
 <!-- commit-skill: readme-standard = ok -->
