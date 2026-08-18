@@ -5,6 +5,7 @@
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
     <img src="https://img.shields.io/github/last-commit/xhqing/NetOpsAgent" alt="Last Commit">
     <img src="https://img.shields.io/badge/Type-AI%20Agent-blueviolet" alt="Type: AI Agent">
+  <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/xhqing/xhqing/main/traffic/badges/NetOpsAgent.json" alt="Visits/day (14d)" />
   </p>
 
   <p>
