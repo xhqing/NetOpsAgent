@@ -6,6 +6,11 @@
 
 ## [未发布]
 
+### 变更（README 徽章组合对齐 fleet 新标准：补 Version 徽章、移除 Last Commit 动态徽章）
+
+- **为什么改**：`/commit` 第 9l 步检测（2026-08-18）发现两版 README 仍含 `github/last-commit/` 动态徽章——按 2026-08-16 fleet 徽章新标准（License / Version / Type 三枚必须含有、不含 GitHub 动态数值 / 时间徽章），Last Commit 属须移除的违规徽章；且本项目从未挂过 Version 徽章（缓存 2026-08-08 写入时还是旧标准「License / Last Commit / Type」，Version 一直是缺项）。
+- **改了什么**：README（EN/CN）徽章区移除 Last Commit 动态徽章、新增 Version-1.0.0 静态徽章（版本号取 `VERSION` 文件），Visitors 访问量徽章（fleet 允许例外）保留不动。
+
 ### 变更（Visitors 徽章更名 Visits/day (14d)：alt 文本与 xhqing 集中统计新 label 对齐）
 
 - **为什么改**：用户要求（2026-08-17）访问量徽章名需表达「最近半月日均访问量」口径——xhqing 集中统计侧的 badge JSON label 已从 `Visitors` 改为 `Visits/day (14d)`（`Visits/day` 是 shields.io 表达日均的惯例写法、`(14d)` 标注 14 天滚动窗口），各仓 README 的徽章 alt 文本同步对齐，避免 alt 与徽章实际显示文字脱节。
