@@ -2,10 +2,10 @@
 
 **拟人名**：Hermes（赫尔墨斯）
 **职称**：网络运维管理员（Network Operations Agent）
-**fleet 项目名**：NetOpsAgent
+**团队项目名**：NetOpsAgent
 **仓库**：xhqing/NetOpsAgent
 
-本项目是 Agent 项目，定位为「网络运维管理员 Hermes」——总体职责是处理**网络连接相关的问题**（代理转发只是众多网络问题中的一部分），当前专职节点真实流量测速、自动选路、故障转移、订阅刷新。项目根目录为 Agent 定位与对外文档；**XPilot** 是 Hermes 开发的 CLI 工具——一个方便使用 Xray-core 的 Python CLI 工具，通过 `xpilot` 命令提供全部节点管理能力，位于**独立仓库** [xhqing/XPilot](https://github.com/xhqing/XPilot)。CLI 命令名保持 `xpilot`（向后兼容，不改命令名与包名）；Agent 化体现在定位、README 人格与 fleet 注册表，不影响工具实际功能。
+本项目是 Agent 项目，定位为「网络运维管理员 Hermes」——总体职责是处理**网络连接相关的问题**（代理转发只是众多网络问题中的一部分），当前专职节点真实流量测速、自动选路、故障转移、订阅刷新。项目根目录为 Agent 定位与对外文档；**XPilot** 是 Hermes 开发的 CLI 工具——一个方便使用 Xray-core 的 Python CLI 工具，通过 `xpilot` 命令提供全部节点管理能力，位于**独立仓库** [xhqing/XPilot](https://github.com/xhqing/XPilot)。CLI 命令名保持 `xpilot`（向后兼容，不改命令名与包名）；Agent 化体现在定位、README 人格与团队注册表，不影响工具实际功能。
 
 ## 目录结构
 

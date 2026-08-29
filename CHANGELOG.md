@@ -6,6 +6,11 @@
 
 ## [未发布]
 
+### 变更（措辞统一 fleet → team：`.claude/CLAUDE.md` + `.commit-cache.md` 跟随全局统一）
+
+- **为什么改**：用户 2026-08-16 已把 xhqing 主页 README 的自称从「舰队 / fleet」改为「团队 / team」，本仓 `.claude/CLAUDE.md`（含同步到子项目 XPilot 的超集内容）与 `.commit-cache.md` 缓存标记仍是 fleet 旧措辞；2026-08-21 用户裁定全量存量一次清零、统一为团队 / team。
+- **改了什么**：`.claude/CLAUDE.md` 2 处（「fleet 项目名」→「团队项目名」、「README 人格与 fleet 注册表」→「团队注册表」）并按超集关系同步 XPilot `.claude/CLAUDE.md`（diff 验证超集一致）；`.commit-cache.md` 2 处缓存标记「fleet 例外 / fleet Visitors 徽章」→「团队」。仅改措辞，职责、徽章、结构均不变。
+
 ### 变更（README 徽章组合对齐 fleet 新标准：补 Version 徽章、移除 Last Commit 动态徽章）
 
 - **为什么改**：`/commit` 第 9l 步检测（2026-08-18）发现两版 README 仍含 `github/last-commit/` 动态徽章——按 2026-08-16 fleet 徽章新标准（License / Version / Type 三枚必须含有、不含 GitHub 动态数值 / 时间徽章），Last Commit 属须移除的违规徽章；且本项目从未挂过 Version 徽章（缓存 2026-08-08 写入时还是旧标准「License / Last Commit / Type」，Version 一直是缺项）。
