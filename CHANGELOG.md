@@ -6,6 +6,11 @@
 
 ## [未发布]
 
+### 新增（根目录软链接 `AGENTS.md` → `.claude/CLAUDE.md`）
+
+- **为什么改**：ZCode 等新一代 agent 工具读取项目级指令的入口文件名是 `AGENTS.md`（不是 `CLAUDE.md`），不建入口则这类工具会话中加载不到本项目指令；建软链接指向 `.claude/CLAUDE.md`，单一源维护、两种文件名约定都能读到，无需双份同步。
+- **改了什么**：项目根新增软链接 `AGENTS.md`，用相对路径指向 `.claude/CLAUDE.md`（相对路径保证仓库移动或 clone 后链接依然有效）；`.claude/CLAUDE.md` 本身无任何改动。
+
 ### 变更（措辞统一 fleet → team：`.claude/CLAUDE.md` + `.commit-cache.md` 跟随全局统一）
 
 - **为什么改**：用户 2026-08-16 已把 xhqing 主页 README 的自称从「舰队 / fleet」改为「团队 / team」，本仓 `.claude/CLAUDE.md`（含同步到子项目 XPilot 的超集内容）与 `.commit-cache.md` 缓存标记仍是 fleet 旧措辞；2026-08-21 用户裁定全量存量一次清零、统一为团队 / team。
