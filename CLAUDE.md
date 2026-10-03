@@ -10,8 +10,8 @@
 ## 目录结构
 
 - 根目录 README：Agent 项目（Hermes）对外说明，指向独立仓库 XPilot 的工具文档。
-- `.claude/`：本项目独有的能力与配置目录（settings 等）。**不放与全局重复的通用能力**——通用 skills / rules 从全局 `~/.claude/` 或 CapabilityManagerAgent 的 `claude/` 开源镜像获取（「通用能力开源单一出口」规则，2026-08-09 立）。
-- `.codebuddy/CODEBUDDY.md`：CodeBuddy 项目说明（一行引用 `../.claude/CLAUDE.md`，单一来源）。
+- 根目录 `CLAUDE.md`（本文件）：项目角色化说明的单一来源；根目录 `AGENTS.md`、`CODEBUDDY.md` 均为指向它的相对软链接，兼容只认这两种入口文件名的 agent 工具。
+- 通用能力（skills / rules 等）从全局 `~/.claude/` 或 CapabilityManagerAgent 的 `claude/` 开源镜像获取，项目内不留副本、不建 `.claude/` 目录（「通用能力开源单一出口」规则，2026-08-09 立）。
 - 工具本体在独立仓库 [xhqing/XPilot](https://github.com/xhqing/XPilot)（含其独立 README、配置、测试、Docker 与开发工具链）。
 
 ## 子项目清单

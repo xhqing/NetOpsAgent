@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
   <rect width="640" height="200" rx="28" ry="28" fill="url(#bg)"/>
-  <!-- 网络运维图标：中心节点 + 雷达扫描弧 + 分布式节点 -->
+  <!-- NetOps icon: hub node + radar arcs + distributed nodes -->
   <g>
     <circle cx="118" cy="100" r="34" fill="none" stroke="#C4B5FD" stroke-width="3" stroke-dasharray="9 6"/>
     <circle cx="118" cy="100" r="6.5" fill="#FFFFFF"/>

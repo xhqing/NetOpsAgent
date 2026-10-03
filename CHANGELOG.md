@@ -6,6 +6,16 @@
 
 ## [未发布]
 
+### 变更（assets/logo.svg 注释去中文）
+
+- **为什么改**：全局规则新增「Logo / 图标资产文字一律用英文」（2026-09-12 用户立，起因 Swing 仓库 logo 副标题混入中文被指出）：logo 是面向全球读者的视觉标识，中文受众已有 README_cn.md 双语通道；且 SVG 中文依赖查看环境的字体回退，渲染不可控。本次为按新规批量清理存量。
+- **改了什么**：`assets/logo.svg` 内部注释「网络运维图标：中心节点 + 雷达扫描弧 + 分布式节点」改为英文注释（渲染文字本就是英文，仅清注释；按新规使文件内中文归零，grep 自检干净）。
+
+### 变更（项目指令文件迁至仓库根：`CLAUDE.md` + `AGENTS.md` / `CODEBUDDY.md` 软链接）
+
+- **为什么改**：对齐团队脚手架现行标准——角色化 `CLAUDE.md` 直接放项目根目录、不再建 `.claude/` 目录（通用能力经全局 `~/.claude/` 与 CapabilityManagerAgent 镜像统一分发，项目内不留副本）；`AGENTS.md`（ZCode 等工具入口）与 `CODEBUDDY.md`（CodeBuddy 入口）以相对软链接指向根 `CLAUDE.md`，单一来源、内容天然同步。
+- **改了什么**：① 项目指令文件从 `.claude/CLAUDE.md` 迁至根目录 `CLAUDE.md`（迁移时内容逐字不变），删除 `.claude/` 目录；② 新增根目录软链接 `CODEBUDDY.md` → `CLAUDE.md`，删除 `.codebuddy/` 目录；③ `AGENTS.md` 软链接目标由 `.claude/CLAUDE.md` 改为 `CLAUDE.md`（原目标随迁移失效，修正后不再悬空）；④ 迁后按新布局更新 `CLAUDE.md`「目录结构」节（原 `.claude/`、`.codebuddy/CODEBUDDY.md` 两条描述已过时）。
+
 ### 新增（根目录软链接 `AGENTS.md` → `.claude/CLAUDE.md`）
 
 - **为什么改**：ZCode 等新一代 agent 工具读取项目级指令的入口文件名是 `AGENTS.md`（不是 `CLAUDE.md`），不建入口则这类工具会话中加载不到本项目指令；建软链接指向 `.claude/CLAUDE.md`，单一源维护、两种文件名约定都能读到，无需双份同步。
