@@ -16,7 +16,7 @@
 
 ## 子项目清单
 
-本项目（Hermes）负责维护以下子项目，`.claude/` 与子项目 `.claude/` 之间维护「Agent 项目为权威源、子项目为超集」的关系（全局规则「Agent 项目与子项目的 `.claude/` 超集关系」，2026-08-10 立）：本文件全文随附进子项目 `.claude/CLAUDE.md`，其中「本项目」均指 NetOpsAgent。
+本项目（Hermes）负责维护以下子项目。按全局规则「智能体专属文件归属与子项目映射」（2026-10-12 用户修订，取代原「子项目 `.claude/` 超集」规则；细则见 `~/.claude/docs/agents-registry.md`）：`CLAUDE.md` / `AGENTS.md` / `.claude/` / 项目级 `.pi/` 等智能体专属文件**只有 Agent 项目允许拥有，子项目一律不得存在**；子项目的工作在本 Agent 项目会话里按路径操作（如 `git -C <子项目目录>`），通过 intercom / `agent_call` / `agent_wake` 开启的后台会话一律以本 Agent 项目根目录为工作目录。
 
 - **NetOpsAgent（Hermes）→ XPilot**：独立仓库 [xhqing/XPilot](https://github.com/xhqing/XPilot)，Hermes 开发的 Xray-core 节点管理 CLI 工具。
 
