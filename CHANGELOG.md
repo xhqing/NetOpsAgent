@@ -4,6 +4,13 @@
 
 格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)，版本号遵循 [语义化版本](https://semver.org/lang/zh-CN/)。
 
+## [未发布]
+
+### 变更（Agent 进驻子项目：新增项目级 `.pi/`，子项目清单节同步 2026-10-17 新规）
+
+- **为什么改**：用户 2026-10-17 修订全局规则（细则见 `~/.claude/docs/agents-registry.md`「智能体专属文件归属与子项目映射」节，取代 2026-10-12 的「子项目一律不得存在」）：智能体专属文件的**实体只在 Agent 项目**；子项目根目录挂 `AGENTS.md → ../NetOpsAgent/AGENTS.md`、`.pi → ../NetOpsAgent/.pi` 两条相对路径软链接（随仓库提交），在子项目目录直接开会话即继承 Hermes 的身份 / 规则 / 技能；后台开启 / 唤醒会话（intercom / `agent_call` / `agent_wake`）仍只以 Agent 项目根目录为工作目录。
+- **改了什么**：① 新建项目级 `.pi/` 目录（含 `.gitkeep`，作为子项目 `.pi` 软链接的目标）；② `CLAUDE.md`「子项目清单」节按新规更新（实体只在 Agent 项目 + 子项目挂两条指回软链接 + 后台会话仍限本项目根目录）；③ 子项目 XPilot 已挂两条软链接（子项目侧改动记 XPilot 仓 CHANGELOG 与提交）。
+
 ## [1.0.1] - 2026-10-12
 
 ### 变更（子项目清单表述随全局新规重写：智能体专属文件只属于 Agent 项目）
